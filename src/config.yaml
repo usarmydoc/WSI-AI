@@ -1,0 +1,36 @@
+# Experiment configuration for multi-tissue WSI damage scoring
+
+model:
+  input_shape: [3, 224, 224]
+  num_tissues: 5
+  num_classes: 10
+  patch_size: [256, 256]
+  stride: [256, 256]
+  aggregate_method: "mean"
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  validation_split: 0.2
+  cross_validation: true
+  k_folds: 5
+
+preprocessing:
+  stain_normalization: true
+  normalizer_method: "Macenko"
+  reference_images:
+    lung: "path/to/lung_reference.png"
+    kidney: "path/to/kidney_reference.png"
+    heart: "path/to/heart_reference.png"
+    liver: "path/to/liver_reference.png"
+    bowel: "path/to/bowel_reference.png"
+
+logging:
+  use_tensorboard: true
+  log_dir: "logs/"
+
+inference:
+  output_csv: "results.csv"
+  grad_cam: true
+  uncertainty: true
