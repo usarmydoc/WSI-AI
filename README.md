@@ -1,4 +1,4 @@
-# Medical-Grade AI for Multi-Tissue WSI Damage Scoring
+# AI for Multi-Tissue WSI Damage Scoring
 
 ## ⚠️ **IMPORTANT: RESEARCH/TESTING VERSION ONLY**
 
