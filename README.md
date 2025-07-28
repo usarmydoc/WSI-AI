@@ -1,4 +1,4 @@
-# Medical-Grade AI for Multi-Tissue WSI Damage Scoring
+# AI for Multi-Tissue WSI Damage Scoring
 
 A comprehensive deep learning system for scoring tissue damage (0-9) in Whole Slide Images (WSIs) across lung, kidney, heart, liver, and bowel tissues.
 
