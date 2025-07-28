@@ -1,6 +1,19 @@
 # Medical-Grade AI for Multi-Tissue WSI Damage Scoring
 
-A comprehensive deep learning system for scoring tissue damage (0-9) in Whole Slide Images (WSIs) across lung, kidney, heart, liver, and bowel tissues.
+## ⚠️ **IMPORTANT: RESEARCH/TESTING VERSION ONLY**
+
+**🚨 MEDICAL DISCLAIMER: This is a research prototype and testing framework only. This system has NOT been trained on real medical data and is NOT validated for clinical use. Do not use for actual medical diagnosis or patient care.**
+
+### 🧪 **Current Status:**
+- **Research Framework**: Architecture and evaluation pipeline only
+- **Synthetic Data**: Uses computer-generated test data, not real WSI images
+- **No Clinical Training**: Model has not been trained on actual patient data
+- **Not FDA Approved**: Not intended for diagnostic use
+- **Academic Purpose**: For research, education, and framework development only
+
+---
+
+A comprehensive deep learning framework for developing tissue damage scoring systems in Whole Slide Images (WSIs) across lung, kidney, heart, liver, and bowel tissues.
 
 ## 🏥 Medical Research Grade Features
 
@@ -42,7 +55,7 @@ lung AI/
 └── README.md                       # This file
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Testing Framework)
 
 ### Prerequisites
 
@@ -50,12 +63,14 @@ lung AI/
 - CUDA-capable GPU (recommended)
 - Git for version control
 
+**Note**: This installation sets up the testing framework with synthetic data only.
+
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/medical-wsi-ai.git
-cd medical-wsi-ai
+git clone https://github.com/usarmydoc/WSI-AI.git
+cd WSI-AI
 
 # Install dependencies
 pip install -r requirements.txt
@@ -86,24 +101,26 @@ preprocessing:
   normalizer_method: "Macenko"
 ```
 
-### Training
+### Training (Synthetic Data Only)
 
 ```python
 from src.train import main
+# Note: Uses synthetic data for testing the training pipeline
 model, history = main()
 ```
 
-### Inference
+### Inference (Testing Framework)
 
 ```python
 from src.inference import run_inference
 
+# Example with synthetic test data
 slides_info = [
-    {"wsi_path": "path/to/slide.svs", "tissue": "lung"},
-    {"wsi_path": "path/to/slide2.svs", "tissue": "kidney"}
+    {"wsi_path": "synthetic_slide_1.npz", "tissue": "lung"},
+    {"wsi_path": "synthetic_slide_2.npz", "tissue": "kidney"}
 ]
 
-results = run_inference("best_model.pth", slides_info, "src/config.yaml")
+results = run_inference("test_model.pth", slides_info, "src/config.yaml")
 ```
 
 ### Evaluation
@@ -115,6 +132,24 @@ results = evaluate_model(model, test_data, test_labels, tissue_labels)
 report = generate_clinical_report(results)
 print(report)
 ```
+
+## 🧬 Synthetic Data Generation
+
+**This system currently operates entirely on synthetic (computer-generated) data:**
+
+### Current Data Sources
+- **Synthetic WSI Patches**: Computer-generated tissue-like images
+- **Simulated Damage Patterns**: Algorithmically created damage representations  
+- **No Real Patient Data**: Zero actual medical imaging data used
+- **Testing Purpose**: Data designed to validate system architecture only
+
+### Synthetic Data Features
+- **Tissue-specific patterns**: Different visual characteristics per tissue type
+- **Damage simulation**: Graduated damage levels (0-9 scale)
+- **Quality validation**: Ensures data meets expected parameters
+- **Reproducible**: Consistent generation for testing purposes
+
+**⚠️ Important**: Synthetic data performance does not predict real-world medical accuracy.
 
 ## 📊 Model Architecture
 
@@ -277,6 +312,16 @@ config['preprocessing']['min_tissue_ratio'] = 0.7
 ```
 
 ## 🚨 Important Notes
+
+### ⚠️ **Research and Testing Framework Only**
+
+**THIS IS NOT A TRAINED MEDICAL SYSTEM:**
+
+- **NO REAL DATA**: This system uses only synthetic/computer-generated data for testing
+- **NO CLINICAL TRAINING**: The model has not been trained on actual WSI images or patient data
+- **FRAMEWORK ONLY**: Provides the architecture and evaluation pipeline for future development
+- **NOT FOR DIAGNOSIS**: Never use for actual medical diagnosis or patient care
+- **RESEARCH PURPOSE**: Intended for academic research, education, and system development only
 
 ### Clinical Use Disclaimer
 
