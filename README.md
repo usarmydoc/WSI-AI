@@ -425,9 +425,9 @@ If you use this code in your research, please cite:
 ```bibtex
 @software{medical_wsi_ai,
   title={AI for Multi-Tissue WSI Damage Scoring},
-  author={[Your Name]},
+  author={Ross Meade},
   year={2025},
-  url={https://github.com/your-repo/medical-wsi-ai}
+  url={https://github.com/your-repo/wsi-ai}
 }
 ```
 
