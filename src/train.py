@@ -1,6 +1,6 @@
 
 """
-Medical-grade training script for multi-tissue WSI damage scoring.
+Training script for multi-tissue WSI damage scoring.
 
 Includes cross-validation, early stopping, learning rate scheduling, and comprehensive logging.
 """

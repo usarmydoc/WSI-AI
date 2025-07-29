@@ -128,7 +128,7 @@ The integration test (`test_integration.py`) confirms all improvements work corr
 - **Data format auto-detection** and conversion
 - **Progressive degradation** rather than complete failure
 
-### 3. Medical-Grade Metrics
+### 3. Clinical Metrics
 - **Clinical accuracy metrics** with proper statistical foundations
 - **Uncertainty quantification** ready for implementation
 - **Tissue-specific performance analysis** for clinical validation
@@ -143,7 +143,7 @@ The integration test (`test_integration.py`) confirms all improvements work corr
 ### Model Architecture
 - **51.6M parameters** CNN successfully tested and validated
 - **Multi-tissue classification** across 5 organ types
-- **0-10 damage scoring** with medical-grade precision
+- **0-10 damage scoring** with clinical precision
 
 ### Evaluation System
 - **Comprehensive metrics**: Accuracy, MAE, Precision, Recall, F1, Kappa
@@ -217,7 +217,7 @@ visualize_synthetic_samples(synthetic_data, synthetic_labels, synthetic_tissues)
 
 ## 🏥 Medical AI Compliance
 
-All improvements maintain and enhance medical-grade requirements:
+All improvements maintain and enhance clinical requirements:
 
 - **Statistical rigor**: Proper implementation of clinical metrics
 - **Error transparency**: Comprehensive logging for audit trails

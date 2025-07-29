@@ -1,5 +1,5 @@
 """
-Medical-grade evaluation utilities for multi-tissue WSI damage scoring.
+Evaluation utilities for multi-tissue WSI damage scoring.
 
 Includes comprehensive metrics, clinical validation, and uncertainty quantification.
 """
@@ -35,7 +35,7 @@ def one_hot_tissue(tissue: str) -> torch.Tensor:
 def evaluate_model(model, test_data, test_labels, tissue_labels, device='cpu', 
                   return_uncertainty=False):
     """
-    Comprehensive model evaluation with medical-grade metrics.
+    Comprehensive model evaluation with clinical metrics.
     
     Args:
         model: Trained PyTorch model

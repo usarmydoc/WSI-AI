@@ -1,5 +1,5 @@
 """
-Medical-grade visualization utilities for WSI damage scoring analysis.
+Visualization utilities for WSI damage scoring analysis.
 
 Includes Grad-CAM, attention maps, uncertainty visualization, and clinical reporting.
 Enhanced with debug visualization functions from notebook.

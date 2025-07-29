@@ -21,7 +21,7 @@ A comprehensive deep learning framework for developing tissue damage scoring sys
 - **Multi-tissue damage scoring**: 0-9 scale for lung, kidney, heart, liver, and bowel
 - **Uncertainty quantification**: MC Dropout for prediction confidence
 - **Explainable AI**: Grad-CAM heatmaps for clinical interpretation
-- **Medical-grade validation**: Clinical metrics including Cohen's Kappa
+- **Clinical validation**: Clinical metrics including Cohen's Kappa
 - **Comprehensive evaluation**: Per-tissue and severity-based analysis
 
 ### Technical Architecture
@@ -45,7 +45,7 @@ lung AI/
 │   ├── tests/
 │   │   └── test_model.py           # Unit tests
 │   ├── config.yaml                 # Experiment configuration
-│   ├── train.py                    # Medical-grade training pipeline
+│   ├── train.py                    # Training pipeline
 │   ├── evaluate.py                 # Comprehensive evaluation
 │   ├── inference.py                # Batch inference pipeline
 │   ├── visualization.py            # Clinical visualization tools
@@ -247,7 +247,7 @@ python src/tests/test_model.py
 - **Preprocessing**: Apply stain normalization and quality filtering
 
 ### 3. Model Development
-- **Architecture**: Choose between enhanced or medical-grade CNN
+- **Architecture**: Choose between enhanced or advanced CNN
 - **Training**: Use cross-validation for robust evaluation
 - **Validation**: Apply clinical metrics and uncertainty quantification
 
@@ -286,8 +286,8 @@ python src/tests/test_model.py
 # Backward compatible model
 model = build_model(model_type='enhanced')
 
-# Medical-grade model with attention
-model = build_model(model_type='medical_grade')
+# Advanced model with attention
+model = build_model(model_type='advanced')
 ```
 
 ### Training Modes
@@ -384,7 +384,7 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @software{medical_wsi_ai,
-  title={Medical-Grade AI for Multi-Tissue WSI Damage Scoring},
+  title={AI for Multi-Tissue WSI Damage Scoring},
   author={[Your Name]},
   year={2025},
   url={https://github.com/your-repo/medical-wsi-ai}
