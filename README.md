@@ -173,7 +173,7 @@ report = generate_clinical_report(results)
 print(report)
 ```
 
-## 🧬 Synthetic Data Generation
+##  Synthetic Data Generation
 
 **This system currently operates entirely on synthetic (computer-generated) data:**
 
@@ -191,7 +191,7 @@ print(report)
 
 **Important**: Synthetic data performance does not predict real-world medical accuracy.
 
-## 📊 Model Architecture
+##  Model Architecture
 
 ### MedicalGradeCNN Features
 
@@ -210,7 +210,7 @@ print(report)
   - Logits: `(batch_size, 10)` damage scores 0-9
   - Uncertainty: `(batch_size, 1)` confidence measure (optional)
 
-## 🔬 Medical Validation
+##  Medical Validation
 
 ### Clinical Metrics
 
@@ -227,7 +227,7 @@ print(report)
 - **Cross-validation**: Robust performance estimation
 - **Error Analysis**: Clinical significance assessment
 
-## 📈 Evaluation and Visualization
+##  Evaluation and Visualization
 
 ### Comprehensive Metrics
 
@@ -301,7 +301,7 @@ python src/tests/test_model.py
 - **Validation**: Multi-site testing and expert review
 - **Ethics**: Ensure patient privacy and clinical safety
 
-## 📋 Clinical Recommendations
+##  Clinical Recommendations
 
 ### Performance Thresholds
 
@@ -386,7 +386,7 @@ This AI system is designed for research purposes. Clinical deployment requires:
 - **Error Analysis**: Investigate large prediction errors
 - **Feedback Loop**: Incorporate expert corrections
 
-## 📖 References and Resources
+##  References and Resources
 
 ### Key Publications
 - TIAToolbox: Comprehensive toolbox for computational pathology
@@ -404,7 +404,7 @@ This AI system is designed for research purposes. Clinical deployment requires:
 - **HistomicsTK**: Image analysis algorithms
 - **PyTorch**: Deep learning framework
 
-## 📞 Support and Contributing
+##  Support and Contributing
 
 ### Issues and Questions
 - Create GitHub issues for bugs or feature requests
