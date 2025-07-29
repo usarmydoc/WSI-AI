@@ -2,7 +2,7 @@
 Evaluation utilities for multi-tissue WSI damage scoring.
 
 Includes comprehensive metrics, clinical validation, and uncertainty quantification.
-Enhanced with robust error handling and fallback implementations from notebook debugging.
+Enhanced with robust error handling and memory optimization for low-spec systems.
 """
 
 import torch
@@ -33,6 +33,14 @@ try:
 except ImportError:
     SEABORN_AVAILABLE = False
     logger.warning("Seaborn not available - using matplotlib fallback")
+
+# Import memory optimizer
+try:
+    from .memory_optimizer import MemoryOptimizer, process_wsi_efficiently
+    MEMORY_OPTIMIZER_AVAILABLE = True
+except ImportError:
+    MEMORY_OPTIMIZER_AVAILABLE = False
+    logger.warning("Memory optimizer not available - using standard processing")
 
 TISSUE_TYPES = ["lung", "kidney", "heart", "liver", "bowel"]
 

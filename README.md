@@ -57,6 +57,46 @@ lung AI/
 
 ## 🚀 Quick Start (Testing Framework)
 
+### **Automatic Hardware Detection**
+The system automatically detects your hardware and selects optimal settings:
+
+```python
+from src.auto_config import quick_setup
+
+# Automatically configure everything for your system
+model, device, config = quick_setup()
+
+# Example output:
+# 🔧 WSI AI Configuration:
+#   System: 16.0GB RAM, 8 cores
+#   GPU: NVIDIA RTX 3060 (8.0GB)
+#   Model: lightweight
+#   Batch Size: 4
+#   Device: cuda
+#   Performance: good
+```
+
+### **Manual Model Selection**
+```python
+from src.models.cnn import build_model
+
+# Auto-detect optimal model (recommended)
+model = build_model(model_type='auto')
+
+# Or specify manually:
+model = build_model(model_type='lightweight')  # For 8-16GB systems
+model = build_model(model_type='enhanced')     # For 16GB+ systems
+```
+
+### **System Compatibility Check**
+```bash
+# Verify your system meets requirements
+python verify_repo.py
+
+# Test automatic hardware detection
+python demo_auto_detection.py
+```
+
 ### Prerequisites
 
 - Python 3.8+ (tested with 3.12)
