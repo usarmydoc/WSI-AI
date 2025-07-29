@@ -1,10 +1,10 @@
 # AI for Multi-Tissue WSI Damage Scoring
 
-## ⚠️ **IMPORTANT: RESEARCH/TESTING VERSION ONLY**
+## **IMPORTANT: RESEARCH/TESTING VERSION ONLY**
 
-**🚨 MEDICAL DISCLAIMER: This is a research prototype and testing framework only. This system has NOT been trained on real medical data and is NOT validated for clinical use. Do not use for actual medical diagnosis or patient care.**
+**MEDICAL DISCLAIMER: This is a research prototype and testing framework only. This system has NOT been trained on real medical data and is NOT validated for clinical use. Do not use for actual medical diagnosis or patient care.**
 
-### 🧪 **Current Status:**
+### **Current Status:**
 - **Research Framework**: Architecture and evaluation pipeline only
 - **Synthetic Data**: Uses computer-generated test data, not real WSI images
 - **No Clinical Training**: Model has not been trained on actual patient data
@@ -15,7 +15,7 @@
 
 A comprehensive deep learning framework for developing tissue damage scoring systems in Whole Slide Images (WSIs) across lung, kidney, heart, liver, and bowel tissues.
 
-## 🏥 Medical Research Grade Features
+## Medical Research Grade Features
 
 ### Core Capabilities
 - **Multi-tissue damage scoring**: 0-9 scale for lung, kidney, heart, liver, and bowel
@@ -31,7 +31,7 @@ A comprehensive deep learning framework for developing tissue damage scoring sys
 - **Cross-validation**: K-fold validation for robust evaluation
 - **Early stopping**: Prevents overfitting with patience monitoring
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 lung AI/
@@ -55,7 +55,7 @@ lung AI/
 └── README.md                       # This file
 ```
 
-## 🚀 Quick Start (Testing Framework)
+## Quick Start (Testing Framework)
 
 ### **Automatic Hardware Detection**
 The system automatically detects your hardware and selects optimal settings:
@@ -67,7 +67,7 @@ from src.auto_config import quick_setup
 model, device, config = quick_setup()
 
 # Example output:
-# 🔧 WSI AI Configuration:
+# WSI AI Configuration:
 #   System: 16.0GB RAM, 8 cores
 #   GPU: NVIDIA RTX 3060 (8.0GB)
 #   Model: lightweight
@@ -189,7 +189,7 @@ print(report)
 - **Quality validation**: Ensures data meets expected parameters
 - **Reproducible**: Consistent generation for testing purposes
 
-**⚠️ Important**: Synthetic data performance does not predict real-world medical accuracy.
+**Important**: Synthetic data performance does not predict real-world medical accuracy.
 
 ## 📊 Model Architecture
 
@@ -253,7 +253,7 @@ cam = grad_cam.generate_cam(image_tensor, tissue_onehot)
 overlayed = grad_cam.visualize_cam(original_image, cam)
 ```
 
-## 🧪 Testing and Development
+## Testing and Development
 
 ### Jupyter Notebook
 
@@ -274,7 +274,7 @@ pytest src/tests/
 python src/tests/test_model.py
 ```
 
-## 🏗️ Research Workflow
+## Research Workflow
 
 ### 1. Literature Review
 - Search PubMed, Google Scholar for WSI damage assessment
@@ -318,7 +318,7 @@ python src/tests/test_model.py
 - **Liver**: Uniform appearance, stain normalization critical
 - **Bowel**: Variable morphology, extensive validation needed
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ### Model Selection
 
@@ -351,9 +351,9 @@ config['preprocessing']['normalizer_method'] = 'Macenko'  # or 'Vahadane'
 config['preprocessing']['min_tissue_ratio'] = 0.7
 ```
 
-## 🚨 Important Notes
+## Important Notes
 
-### ⚠️ **Research and Testing Framework Only**
+### **Research and Testing Framework Only**
 
 **THIS IS NOT A TRAINED MEDICAL SYSTEM:**
 
@@ -433,4 +433,4 @@ If you use this code in your research, please cite:
 
 ---
 
-**⚠️ Remember**: This is research software. Always validate results with medical experts before any clinical application.
+**Remember**: This is research software. Always validate results with medical experts before any clinical application.

@@ -225,7 +225,7 @@ def process_wsi_efficiently(wsi_patches, model, device, progress_callback=None):
 
 def print_memory_requirements():
     """Print memory requirements for different configurations."""
-    print("💾 Memory Requirements by Configuration:")
+    print("Memory Requirements by Configuration:")
     print("=" * 50)
     
     configs = [

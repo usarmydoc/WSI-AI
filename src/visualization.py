@@ -48,7 +48,7 @@ def debug_visualize_results(true_labels, predictions, tissue_labels=None):
         predictions: Array of predicted damage scores  
         tissue_labels: Optional list of tissue types
     """
-    print("📊 Creating debug visualizations...")
+    print("Creating debug visualizations...")
     
     try:
         fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -127,7 +127,7 @@ def debug_visualize_results(true_labels, predictions, tissue_labels=None):
         plt.show()
         
         # Additional analysis
-        print(f"\n📊 Detailed Analysis:")
+        print(f"\nDetailed Analysis:")
         
         # Accuracy by damage level
         unique_true = np.unique(true_labels)
@@ -159,7 +159,7 @@ def debug_visualize_results(true_labels, predictions, tissue_labels=None):
                     print(f"    {tissue}: Acc={tissue_acc:.2f}, MAE={tissue_mae:.2f} ({count} samples)")
         
     except Exception as e:
-        print(f"❌ Error in visualization: {e}")
+        print(f"[ERROR] Error in visualization: {e}")
         import traceback
         traceback.print_exc()
         
@@ -184,7 +184,7 @@ def debug_visualize_results(true_labels, predictions, tissue_labels=None):
             plt.show()
             
         except Exception as fallback_error:
-            print(f"❌ Even fallback visualization failed: {fallback_error}")
+            print(f"[ERROR] Even fallback visualization failed: {fallback_error}")
 
 
 def plot_damage_scores(scores: List[float], tissue_types: List[str], 

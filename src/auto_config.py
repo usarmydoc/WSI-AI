@@ -68,7 +68,7 @@ class WSIAIConfig:
     
     def print_config(self):
         """Print current configuration."""
-        print("🔧 WSI AI Configuration:")
+        print("WSI AI Configuration:")
         print(f"  System: {self.ram_gb:.1f}GB RAM, {self.cpu_cores} cores")
         if self.gpu_available:
             print(f"  GPU: {self.gpu_name} ({self.gpu_memory_gb:.1f}GB)")
@@ -91,7 +91,7 @@ def quick_setup():
     model = config.create_model()
     device = config.get_device()
     
-    print("✅ Quick setup complete!")
+    print("[INFO] Quick setup complete!")
     config.print_config()
     
     return model, device, config
@@ -145,5 +145,5 @@ if __name__ == "__main__":
     config = auto_configure()
     config.print_config()
     
-    print("\n🚀 Quick setup demo:")
+    print("\nQuick setup demo:")
     model, device, config = quick_setup()

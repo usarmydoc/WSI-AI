@@ -148,7 +148,7 @@ class HardwareDetector:
         info = self.system_info
         config = self.config
         
-        print("🔍 Hardware Detection Results:")
+        print("Hardware Detection Results:")
         print("=" * 40)
         print(f"OS: {info['os']} {info['os_version']}")
         print(f"CPU Cores: {info['cpu_cores']}")
@@ -159,7 +159,7 @@ class HardwareDetector:
         else:
             print("GPU: Not available")
         
-        print(f"\n⚙️ Optimal Configuration:")
+        print(f"\nOptimal Configuration:")
         print(f"Performance Tier: {config['performance_tier'].upper()}")
         print(f"Model Type: {config['model_type']}")
         print(f"Batch Size: {config['batch_size']}")
@@ -168,15 +168,15 @@ class HardwareDetector:
         
         # Performance estimates
         if config['performance_tier'] == 'low_spec':
-            print(f"\n📊 Expected Performance:")
+            print(f"\nExpected Performance:")
             print(f"Processing Time: 15-25 min per WSI")
             print(f"Memory Usage: 3-5 GB peak")
         elif config['performance_tier'] == 'medium_spec':
-            print(f"\n📊 Expected Performance:")
+            print(f"\nExpected Performance:")
             print(f"Processing Time: 8-15 min per WSI")
             print(f"Memory Usage: 6-10 GB peak")
         else:
-            print(f"\n📊 Expected Performance:")
+            print(f"\nExpected Performance:")
             print(f"Processing Time: 3-8 min per WSI")
             print(f"Memory Usage: 8-16 GB peak")
     
@@ -217,7 +217,7 @@ def auto_build_model():
     
     # Print selection info
     param_count = sum(p.numel() for p in model.parameters())
-    print(f"🤖 Auto-selected {config['model_type']} model ({param_count:,} parameters)")
+    print(f"Auto-selected {config['model_type']} model ({param_count:,} parameters)")
     
     return model
 
@@ -238,4 +238,4 @@ if __name__ == "__main__":
     detector.print_system_info()
     
     compatible, message = detector.is_compatible()
-    print(f"\n✅ Compatibility: {message}")
+    print(f"\n[INFO] Compatibility: {message}")

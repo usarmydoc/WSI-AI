@@ -73,7 +73,7 @@ def debug_evaluate_model(model, test_data, test_labels, tissue_labels, device='c
     
     try:
         # Check inputs with detailed validation
-        print(f"📊 Input validation:")
+        print(f"Input validation:")
         print(f"  - Test data shape: {test_data.shape}")
         print(f"  - Test labels shape: {test_labels.shape}")
         print(f"  - Tissue labels: {len(tissue_labels)} samples")
@@ -102,7 +102,7 @@ def debug_evaluate_model(model, test_data, test_labels, tissue_labels, device='c
         # Create tissue one-hot encodings with error handling
         def one_hot_tissue(tissue):
             if tissue not in TISSUE_TYPES:
-                print(f"⚠️ Unknown tissue type '{tissue}', defaulting to 'lung'")
+                print(f"[WARN] Unknown tissue type '{tissue}', defaulting to 'lung'")
                 tissue = "lung"
             idx = TISSUE_TYPES.index(tissue)
             arr = torch.zeros(len(TISSUE_TYPES), dtype=torch.float32)
@@ -138,7 +138,7 @@ def debug_evaluate_model(model, test_data, test_labels, tissue_labels, device='c
                         print(f"  - Sample predictions: {batch_preds[:5].tolist()}")
                 
                 except Exception as e:
-                    print(f"❌ Error in batch {i//batch_size}: {e}")
+                    print(f"[ERROR] Error in batch {i//batch_size}: {e}")
                     # Fill with random predictions for this batch
                     batch_size_actual = batch_end - i
                     predictions.extend(np.random.randint(0, 10, batch_size_actual).tolist())
@@ -153,7 +153,7 @@ def debug_evaluate_model(model, test_data, test_labels, tissue_labels, device='c
         return predictions, true_labels
         
     except Exception as e:
-        print(f"❌ Critical error in evaluation: {e}")
+        print(f"[ERROR] Critical error in evaluation: {e}")
         import traceback
         traceback.print_exc()
         return None, None
@@ -503,17 +503,17 @@ def generate_clinical_report(results: Dict) -> str:
     if results['accuracy'] >= 0.85:
         report.append("✓ Model shows good clinical performance")
     else:
-        report.append("⚠ Model needs improvement before clinical use")
+        report.append("[WARN] Model needs improvement before clinical use")
     
     if error_analysis['large_error_rate'] <= 0.05:
         report.append("✓ Low rate of clinically significant errors")
     else:
-        report.append("⚠ High rate of large prediction errors - review required")
+        report.append("[WARN] High rate of large prediction errors - review required")
     
     if kappa_value >= 0.6:
         report.append("✓ Acceptable inter-rater agreement equivalent")
     else:
-        report.append("⚠ Poor agreement - model reliability questionable")
+        report.append("[WARN] Poor agreement - model reliability questionable")
     
     report.append("=" * 60)
     
@@ -532,7 +532,7 @@ def debug_calculate_metrics(true_labels, predictions):
     Returns:
         dict: Comprehensive metrics with fallbacks
     """
-    print("📊 Calculating classification metrics...")
+    print("Calculating classification metrics...")
     
     try:
         # Basic validation
@@ -575,7 +575,7 @@ def debug_calculate_metrics(true_labels, predictions):
             }
             
         except Exception as e:
-            print(f"⚠️ Sklearn metrics failed: {e}")
+            print(f"[WARN] Sklearn metrics failed: {e}")
             print("  - Using manual metric calculations")
         
         # Fallback manual calculations

@@ -1,6 +1,6 @@
 # Optimized Usage Guide for Low-Spec Systems
 
-## 🚀 Quick Start for Dell OptiPlex & Lab Desktops
+## Quick Start for Dell OptiPlex & Lab Desktops
 
 ### **Automatic Optimization**
 The system automatically detects your hardware and adjusts settings:
@@ -29,7 +29,7 @@ predictions = process_wsi_efficiently(
 )
 ```
 
-## 📊 Performance by System Type
+## Performance by System Type
 
 ### **8GB RAM System (Dell OptiPlex 7070)**
 - **Model**: Lightweight CNN (~5M parameters)
@@ -49,7 +49,7 @@ predictions = process_wsi_efficiently(
 - **Processing Time**: 3-8 min per WSI
 - **Memory Usage**: ~8-12GB peak
 
-## 🔧 Manual Configuration
+## Manual Configuration
 
 ### **For Very Limited Systems**
 ```python
@@ -72,7 +72,7 @@ settings = {
 }
 ```
 
-## 📈 Monitoring and Optimization
+## Monitoring and Optimization
 
 ### **Check Memory Usage**
 ```python
@@ -96,7 +96,7 @@ optimal_batch = MemoryOptimizer.get_optimal_batch_size(
 )
 ```
 
-## 💡 Tips for Best Performance
+## Tips for Best Performance
 
 ### **Hardware Optimization**
 1. **Upgrade RAM**: 8GB → 16GB provides significant improvement
@@ -116,7 +116,7 @@ optimal_batch = MemoryOptimizer.get_optimal_batch_size(
 3. **Cache results**: Save processed patches to avoid recomputation
 4. **Compress data**: Use efficient formats
 
-## 🔄 Troubleshooting
+## Troubleshooting
 
 ### **Out of Memory Errors**
 ```python
@@ -148,7 +148,7 @@ settings['use_mixed_precision'] = True
 - Add swap space if available
 - Consider cloud processing for large datasets
 
-## 📞 Getting Help
+## Getting Help
 
 If you encounter issues:
 1. Run `python verify_repo.py` to check system compatibility

@@ -1,11 +1,11 @@
 # System Requirements for WSI AI
 
-## 🖥️ Minimum Requirements
+## Minimum Requirements
 
 ### **Operating System**
-- ✅ **Windows 10/11** (64-bit)
-- ✅ **Linux** (Ubuntu 18.04+ recommended)
-- ✅ **macOS** (10.15+ with Intel or Apple Silicon)
+- **Windows 10/11** (64-bit)
+- **Linux** (Ubuntu 18.04+ recommended)
+- **macOS** (10.15+ with Intel or Apple Silicon)
 
 ### **Hardware Requirements**
 
@@ -72,7 +72,7 @@ scikit-learn
 - **Storage**: 1TB+ NVMe SSD
 - **Use Case**: Large datasets, production deployment
 
-## ⚡ Performance Estimates
+## Performance Estimates
 
 ### **Model Inference** (per WSI)
 - **CPU Only (i5-8th gen)**: 10-20 minutes
@@ -103,14 +103,14 @@ scikit-learn
 - **CPU**: [Your current CPU]
 - **RAM**: [Your current RAM]
 - **Python**: 3.12
-- **Status**: ✅ Verified working
+- **Status**: [VERIFIED] Verified working
 
 ### **Cloud Options**
 - **Google Colab Pro**: T4/A100 GPU, good for development
 - **AWS EC2**: p3.2xlarge or better for production
 - **Azure**: NC6s_v3 or better
 
-## 📋 Quick Compatibility Check
+## Quick Compatibility Check
 
 Run this command to check your system:
 ```bash
@@ -118,12 +118,12 @@ python verify_repo.py
 ```
 
 The script will test:
-- ✅ Python environment
-- ✅ Core dependencies
-- ✅ Model creation (tests GPU/CPU)
-- ✅ Memory requirements
+- [CHECK] Python environment
+- [CHECK] Core dependencies
+- [CHECK] Model creation (tests GPU/CPU)
+- [CHECK] Memory requirements
 
-## 💡 Performance Tips for Lab Desktop Systems
+## Performance Tips for Lab Desktop Systems
 
 ### **For 8GB RAM Systems**
 1. **Reduce batch size** to 2-4 patches at once
